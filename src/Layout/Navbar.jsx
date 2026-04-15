@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import profile from '../assets/Image/profile.jpg'
 import logo from '../assets/Image/logo.png'
+import { toast } from "react-toastify";
 
 const Navbar = () => {
     const user = JSON.parse(localStorage.getItem("user"));
@@ -13,6 +14,7 @@ const Navbar = () => {
         localStorage.removeItem("token");
         localStorage.removeItem("user");
         navigate("/");
+        toast.success("Logout successfull")
     };
 
     const location = useLocation()
