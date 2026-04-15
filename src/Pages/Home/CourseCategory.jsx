@@ -73,7 +73,7 @@ const CourseCategory = () => {
                             </h3>
 
                             {/* Arrow Animation */}
-                            <div className="mt-3 flex items-center gap-2 text-sm font-medium opacity-70 group-hover:opacity-100 transition">
+                            <div onClick={() => navigate('/courses')} className="mt-3 flex items-center gap-2 text-sm font-medium opacity-70 group-hover:opacity-100 transition">
                                 <span>Explore</span>
                                 <span className="transform transition-transform duration-300 group-hover:translate-x-2">
                                     →
@@ -82,7 +82,7 @@ const CourseCategory = () => {
                         </div>
 
                         {/* Glow Effect */}
-                        <div className="absolute inset-0 rounded-[30px] opacity-0 group-hover:opacity-20 bg-white blur-2xl transition duration-500"></div>
+                       <div className="absolute inset-0 rounded-[30px] opacity-0 group-hover:opacity-20 bg-white blur-2xl transition duration-500 pointer-events-none"></div>
                     </div>
                 ))}
             </div>
