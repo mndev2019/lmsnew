@@ -89,7 +89,7 @@ const PackageDetail = () => {
   const handleAction = () => {
   if (!token) {
     navigate("/login", {
-      state: { from: `/package/${id}` },
+      state: { from: `/pkg/${id}` },
     });
     return;
   }
